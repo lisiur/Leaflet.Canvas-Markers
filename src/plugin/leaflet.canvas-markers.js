@@ -171,13 +171,13 @@ function layerFactory(L) {
             var iconSize = marker.options.icon.options.iconSize
 
             var adj_x = iconSize[0] / 2
-            var adj_y = iconSize[1] / 2
+            var adj_y = iconSize[1]
             var ret = [
                 {
                     minX: pointPos.x - adj_x,
                     minY: pointPos.y - adj_y,
                     maxX: pointPos.x + adj_x,
-                    maxY: pointPos.y + adj_y,
+                    maxY: pointPos.y,
                     data: marker
                 },
                 {
@@ -329,13 +329,13 @@ function layerFactory(L) {
 
                 var iconSize = e.data.options.icon.options.iconSize
                 var adj_x = iconSize[0] / 2
-                var adj_y = iconSize[1] / 2
+                var adj_y = iconSize[1]
 
                 var newCoords = {
                     minX: pointPos.x - adj_x,
                     minY: pointPos.y - adj_y,
                     maxX: pointPos.x + adj_x,
-                    maxY: pointPos.y + adj_y,
+                    maxY: pointPos.y,
                     data: e.data
                 }
 
