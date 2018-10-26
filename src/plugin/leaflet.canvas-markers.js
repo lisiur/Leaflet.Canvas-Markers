@@ -268,7 +268,7 @@ function layerFactory(L) {
             this._context.fillText(
                 iconFont.textContent.trim(),
                 pointPos.x - parseFloat(fontSize) / 2,
-                pointPos.y + parseFloat(fontSize) - options.iconAnchor[1]
+                pointPos.y
             )
         },
 
