@@ -70,6 +70,7 @@ You can also use L.circleMarker for your points with similar performance, but th
 - **redraw()**: Redraws the layer
 - **addOnClickListener(eventHandler)**: Adds common click listener for all markers
 - **addOnHoverListener(eventHandler)**: Adds a hover over listener for all markers
+- **addContextmenuListener(eventHandler)**: Adds a right click listener for all markers
 
 I also implemented binds for default **addLayer**, **addLayers** and **removeLayer** (equal to removeMarker(marker, _true_) methods.
 

@@ -15,6 +15,7 @@ function layerFactory(L) {
             L.setOptions(this, options)
             this._onClickListeners = []
             this._onHoverListeners = []
+            this._onContextmenuListeners = []
         },
 
         setOptions: function(options) {
@@ -383,6 +384,10 @@ function layerFactory(L) {
             this._onHoverListeners.push(listener)
         },
 
+        addOnContextmenuListener: function(listener) {
+            this._onContextmenuListeners.push(listener)
+        },
+
         _executeListeners: function(event) {
             if (!this._markers) return
 
@@ -410,6 +415,12 @@ function layerFactory(L) {
                     if (hasPopup) ret[0].data.openPopup()
 
                     me._onClickListeners.forEach(function(listener) {
+                        listener(event, ret)
+                    })
+                }
+
+                if (event.type === 'contextmenu') {
+                    me._onContextmenuListeners.forEach(function(listener) {
                         listener(event, ret)
                     })
                 }
