@@ -127,6 +127,7 @@ function layerFactory(L) {
 
             map.on('click', this._executeListeners, this)
             map.on('mousemove', this._executeListeners, this)
+            map.on('contextmenu', this._executeListeners, this)
         },
 
         onRemove: function(map) {
