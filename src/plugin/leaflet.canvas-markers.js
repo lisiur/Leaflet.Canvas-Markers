@@ -136,6 +136,7 @@ function layerFactory(L) {
 
             map.off('click', this._executeListeners, this)
             map.off('mousemove', this._executeListeners, this)
+            map.off('contextmenu', this._executeListeners, this)
 
             map.off('moveend', this._reset, this)
             map.off('resize', this._reset, this)
